@@ -1,12 +1,7 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import React from "react";
 
 const LoggedInLayout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div>
-      <ClerkProvider>{children}</ClerkProvider>
-    </div>
-  );
+  return <div>{children}</div>;
 };
 
 export default LoggedInLayout;

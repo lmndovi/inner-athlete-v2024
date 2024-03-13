@@ -71,8 +71,6 @@ export default function Contact() {
         message: "",
       });
 
-      // Show toast message indicating success
-
       // Handle success
     } catch (error) {
       // Handle submission error

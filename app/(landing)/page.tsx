@@ -2,14 +2,17 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import Contact from "./_components/Contact";
-import Footer from "./_components/Footer";
+import { auth } from "@clerk/nextjs";
+import trees from "@/public/trees.jpg";
 
 export default function Home() {
+  const { userId } = auth();
+
   return (
     <div className="snap-y snap-mandatory h-screen w-screen overflow-y-scroll">
       <main
         id="#main"
-        className="flex flex-col justify-center items-center h-screen  space-y-5 bg-red-500 snap-center"
+        className="flex flex-col justify-center items-center h-screen  space-y-5 snap-center"
       >
         <div>
           <Image
@@ -20,18 +23,22 @@ export default function Home() {
           />
         </div>
         <div className="flex space-x-2">
-          <Link href="/sign-up">
-            <Button>Join Us</Button>
-          </Link>
+          {!userId && (
+            <>
+              <Link href="/sign-up">
+                <Button variant="outline">Join Us</Button>
+              </Link>
+            </>
+          )}
 
           <Link href="#about">
-            <Button>Learn More</Button>
+            <Button variant="outline">Learn More</Button>
           </Link>
         </div>
       </main>
       <section
         id="about"
-        className="flex-col space-y-8 p-5 pt-20 h-screen snap-center"
+        className="flex-col space-y-16 p-5 pt-20 h-screen snap-center bg-[url('/25.png')] bg-center"
       >
         <h2 className="text-3xl">About</h2>
         <p>
@@ -56,7 +63,7 @@ export default function Home() {
       </section>
       <section
         id="contact"
-        className="flex-col space-y-8 p-5 pt-16 h-screen bg-orange-500 snap-center"
+        className="flex-col space-y-8 p-5 pt-16 h-screen  snap-center"
       >
         <div>
           <Contact />

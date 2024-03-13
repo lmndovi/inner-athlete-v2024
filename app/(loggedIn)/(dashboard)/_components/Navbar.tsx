@@ -13,16 +13,22 @@ const Navbar = () => {
         </div>
 
         <ul className="flex space-x-2 items-center">
-          <Link href="/user">
-            <Button size="sm">Home</Button>
+          <Link href="/">
+            <Button size="sm" variant="outline">
+              Home
+            </Button>
           </Link>
-          <Link href="/user">
-            <Button size="sm">Workouts</Button>
+          <Link href="/">
+            <Button size="sm" variant="outline">
+              Workouts
+            </Button>
           </Link>
-          <Link href="#/user">
-            <Button size="sm">Blog</Button>
+          <Link href="/">
+            <Button size="sm" variant="outline">
+              Blog
+            </Button>
           </Link>
-          <div>
+          <div className="">
             <UserButton />
           </div>
         </ul>
