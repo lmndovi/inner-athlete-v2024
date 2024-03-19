@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../_components/Navbar";
 
-const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+const WorkoutLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="">
       <Navbar />
@@ -12,4 +12,4 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default DashboardLayout;
+export default WorkoutLayout;

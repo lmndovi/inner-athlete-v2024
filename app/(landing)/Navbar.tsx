@@ -31,6 +31,11 @@ const Navbar = () => {
                   Profile
                 </Button>
               </Link>
+              <Link href="/dashboard">
+                <Button size="sm" variant="outline">
+                  Dashboard
+                </Button>
+              </Link>
             </>
           )}
           <Link href="#contact">

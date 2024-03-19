@@ -38,7 +38,7 @@ export default function Home() {
       </main>
       <section
         id="about"
-        className="flex-col space-y-16 p-5 pt-20 h-screen snap-center bg-[url('/25.png')] bg-center"
+        className="flex-col space-y-16 p-5 pt-20 h-screen snap-center bg-[url('/10.png')] bg-center"
       >
         <h2 className="text-3xl">About</h2>
         <p>

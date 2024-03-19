@@ -4,7 +4,7 @@ import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
 
-const Navbar = () => {
+const BlogNavbar = () => {
   return (
     <>
       <nav className="fixed top-0 w-full h-14 flex justify-between p-5">
@@ -37,4 +37,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default BlogNavbar;
