@@ -1,9 +1,10 @@
 import React from "react";
+import DashboardCard from "../_components/DashboardCard";
 
 const page = () => {
   return (
     <>
-      <h1 className="text-xl">User Dashboard</h1>
+      <DashboardCard />
     </>
   );
 };
