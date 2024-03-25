@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-import BlogNavbar from "../_components/BlogNavbar";
+import Navbar from "../_components/Navbar";
 
 const BlogLayout = ({ children }: { children: React.ReactNode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,7 +10,7 @@ const BlogLayout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 50) {
+      if (scrollTop > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -27,11 +27,11 @@ const BlogLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <div
-        className={` transition-all duration-300 ease-in-out ${
-          isScrolled ? "hidden" : "fixed"
+        className={`transition-all duration-300 ease-in-out ${
+          isScrolled ? "hidden" : ""
         }`}
       >
-        <BlogNavbar />
+        <Navbar />
       </div>
 
       <main className="flex flex-col h-screen items-center justify-center">

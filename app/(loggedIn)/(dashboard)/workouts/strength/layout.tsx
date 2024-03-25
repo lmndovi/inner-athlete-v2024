@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../_components/Navbar";
+import Navbar from "../../_components/Navbar";
 
-const WorkoutLayout = ({ children }: { children: React.ReactNode }) => {
+const StrengthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="">
       <Navbar />
@@ -12,4 +12,4 @@ const WorkoutLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default WorkoutLayout;
+export default StrengthLayout;
