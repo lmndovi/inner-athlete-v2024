@@ -26,13 +26,13 @@ export default function Home() {
           {!userId && (
             <>
               <Link href="/sign-up">
-                <Button variant="outline">Join Us</Button>
+                <Button variant="ghost">Join Us</Button>
               </Link>
             </>
           )}
 
           <Link href="#about">
-            <Button variant="outline">Learn More</Button>
+            <Button variant="ghost">Learn More</Button>
           </Link>
         </div>
       </main>

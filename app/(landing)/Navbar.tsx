@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full h-14 flex justify-between p-6 items-center">
+      <nav className="fixed top-0 w-full h-14 flex justify-between pt-6 px-5 items-center">
         <div>
           <SmallLogo />
         </div>
@@ -18,30 +18,22 @@ const Navbar = () => {
           {!userId && (
             <>
               <Link href="/sign-in">
-                <Button size="sm" variant="outline">
-                  Login
-                </Button>
+                <Button variant="ghost">Login</Button>
               </Link>
             </>
           )}
           {userId && (
             <>
               <Link href="/profile">
-                <Button size="sm" variant="outline">
-                  Profile
-                </Button>
+                <Button variant="ghost">Profile</Button>
               </Link>
               <Link href="/dashboard">
-                <Button size="sm" variant="outline">
-                  Dashboard
-                </Button>
+                <Button variant="ghost">Dashboard</Button>
               </Link>
             </>
           )}
           <Link href="#contact">
-            <Button size="sm" variant="outline">
-              Contact
-            </Button>
+            <Button variant="ghost">Contact</Button>
           </Link>
           <div>
             <UserButton afterSignOutUrl="/" />

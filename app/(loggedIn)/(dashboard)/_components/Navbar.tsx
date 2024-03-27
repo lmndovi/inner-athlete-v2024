@@ -93,6 +93,7 @@ const Navbar = () => {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
+
           <NavigationMenuItem>
             <UserButton />
           </NavigationMenuItem>
