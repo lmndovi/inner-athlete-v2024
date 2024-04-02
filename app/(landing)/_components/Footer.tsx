@@ -12,12 +12,13 @@ const Footer = () => {
         </div>
 
         <ul className="flex space-x-2">
-          {/* <Link href="/sign-in"> */}
-          <Button size="sm">Privacy Policy</Button>
-          {/* </Link> */}
-          {/* <Link href="#contact"> */}
-          <Button size="sm">Terms of Service</Button>
-          {/* </Link> */}
+          <li>
+            <Button size="sm">Privacy Policy</Button>
+          </li>
+
+          <li>
+            <Button size="sm">Terms of Service</Button>
+          </li>
         </ul>
       </nav>
     </>

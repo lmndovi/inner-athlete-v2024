@@ -8,28 +8,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
-import gym from "@/public/gym.jpg";
+
+import WorkoutVideo from "./WorkoutVideo";
 
 const WorkoutCard = () => {
   return (
     <div>
       <Card>
         <CardContent>
-          <Image src={gym} alt="Gym" className="h-52 w-64 rounded-t-lg" />
+          <WorkoutVideo />
         </CardContent>
         <CardHeader>
           <CardTitle>Workout #1</CardTitle>
-          <CardDescription>
-            <ul>
-              <li>Card description</li>
-              <li>Card description</li>
-            </ul>
-          </CardDescription>
+          <CardDescription>Card description</CardDescription>
         </CardHeader>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
+        <CardFooter>Card Footer</CardFooter>
       </Card>
     </div>
   );

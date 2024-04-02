@@ -35,9 +35,9 @@ const Navbar = () => {
           <Link href="#contact">
             <Button variant="ghost">Contact</Button>
           </Link>
-          <div>
+          <li>
             <UserButton afterSignOutUrl="/" />
-          </div>
+          </li>
         </ul>
       </nav>
     </>
