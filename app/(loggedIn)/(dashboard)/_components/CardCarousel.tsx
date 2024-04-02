@@ -7,9 +7,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import WorkoutCard from "./WorkoutCard";
+import { SpeedWorkoutCard, StrengthWorkoutCard } from "./WorkoutCard";
 
-const CardCarousel = () => {
+export const SpeedCardCarousel = () => {
   return (
     <div>
       <Carousel
@@ -19,13 +19,13 @@ const CardCarousel = () => {
       >
         <CarouselContent>
           <CarouselItem>
-            <WorkoutCard />
+            <SpeedWorkoutCard />
           </CarouselItem>
           <CarouselItem>
-            <WorkoutCard />
+            <SpeedWorkoutCard />
           </CarouselItem>
           <CarouselItem>
-            <WorkoutCard />
+            <SpeedWorkoutCard />
           </CarouselItem>
         </CarouselContent>
         <CarouselPrevious />
@@ -35,4 +35,28 @@ const CardCarousel = () => {
   );
 };
 
-export default CardCarousel;
+export const StrengthCardCarousel = () => {
+  return (
+    <div>
+      <Carousel
+        opts={{
+          loop: true,
+        }}
+      >
+        <CarouselContent>
+          <CarouselItem>
+            <StrengthWorkoutCard />
+          </CarouselItem>
+          <CarouselItem>
+            <StrengthWorkoutCard />
+          </CarouselItem>
+          <CarouselItem>
+            <StrengthWorkoutCard />
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </div>
+  );
+};

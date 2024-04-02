@@ -1,11 +1,11 @@
 import React from "react";
-import CardCarousel from "../../_components/CardCarousel";
+import { StrengthCardCarousel } from "../../_components/CardCarousel";
 
 const page = () => {
   return (
     <>
       <h1 className="text-xl">
-        <CardCarousel />
+        <StrengthCardCarousel />
       </h1>
     </>
   );

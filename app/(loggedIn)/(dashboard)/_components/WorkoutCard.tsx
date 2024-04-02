@@ -8,15 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { SpeedWorkoutVideo, StrengthWorkoutVideo } from "./WorkoutVideo";
 
-import WorkoutVideo from "./WorkoutVideo";
-
-const WorkoutCard = () => {
+export const SpeedWorkoutCard = () => {
   return (
     <div>
       <Card>
         <CardContent>
-          <WorkoutVideo />
+          <SpeedWorkoutVideo />
         </CardContent>
         <CardHeader>
           <CardTitle>Workout #1</CardTitle>
@@ -28,4 +27,19 @@ const WorkoutCard = () => {
   );
 };
 
-export default WorkoutCard;
+export const StrengthWorkoutCard = () => {
+  return (
+    <div>
+      <Card>
+        <CardContent>
+          <StrengthWorkoutVideo />
+        </CardContent>
+        <CardHeader>
+          <CardTitle>Workout #1</CardTitle>
+          <CardDescription>Card description</CardDescription>
+        </CardHeader>
+        <CardFooter>Card Footer</CardFooter>
+      </Card>
+    </div>
+  );
+};

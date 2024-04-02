@@ -1,8 +1,9 @@
 import React from "react";
 import Video from "next-video";
 import speedSwitches from "@/videos/speedSwitches.mp4";
+import gymIncline from "@/videos/gymInclineBench.mp4";
 
-const WorkoutVideo = () => {
+export const SpeedWorkoutVideo = () => {
   return (
     <div>
       <Video src={speedSwitches} loop muted autoPlay />
@@ -10,4 +11,10 @@ const WorkoutVideo = () => {
   );
 };
 
-export default WorkoutVideo;
+export const StrengthWorkoutVideo = () => {
+  return (
+    <div>
+      <Video src={gymIncline} loop muted autoPlay />
+    </div>
+  );
+};
