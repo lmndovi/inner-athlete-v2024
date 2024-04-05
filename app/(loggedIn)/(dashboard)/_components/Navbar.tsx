@@ -1,7 +1,8 @@
 "use client";
 
 import SmallLogo from "@/components/SmallLogo";
-import { Button } from "@/components/ui/button";
+import LargeLogo from "@/components/LargeLogo";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,7 +15,8 @@ import {
 import { cn } from "@/lib/utils";
 import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useWindowSize } from "@/lib/hooks";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -30,6 +32,14 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 const Navbar = () => {
+  const windowSize = useWindowSize(); //Get window size
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    //Check window width is large
+    setIsLargeScreen(windowSize.width >= 1024);
+  }, [windowSize]);
+
   const ListItem = React.forwardRef<
     React.ElementRef<"a">,
     React.ComponentPropsWithoutRef<"a">
@@ -58,9 +68,7 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between p-5">
-      <div>
-        <SmallLogo />
-      </div>
+      <div>{isLargeScreen ? <LargeLogo /> : <SmallLogo />}</div>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>

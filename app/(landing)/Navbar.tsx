@@ -24,9 +24,6 @@ const Navbar = () => {
           )}
           {userId && (
             <>
-              <Link href="/profile">
-                <Button variant="ghost">Profile</Button>
-              </Link>
               <Link href="/dashboard">
                 <Button variant="ghost">Dashboard</Button>
               </Link>
