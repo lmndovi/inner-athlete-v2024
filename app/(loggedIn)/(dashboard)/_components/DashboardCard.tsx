@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Card,
@@ -13,24 +15,32 @@ import avatar from "@/public/male-avatar1.png";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
+import { useUser } from "@clerk/nextjs";
+
 const DashboardCard = () => {
+  const { user } = useUser();
+
+  if (!user) {
+    return null; // Or render a loading indicator, sign-in button, etc.
+  }
+
   return (
     <div className="mt-10">
       <Card className="w-96 h-[35rem] text-center flex flex-col items-center space-y-3 rounded-2xl pt-5">
         <CardHeader>
-          <CardTitle>User Name</CardTitle>
+          <CardTitle>{user?.fullName}</CardTitle>
           <CardDescription>
-            <p>User Email</p>
-            <div className="flex space-x-2 px-5 py-5 text-gray-500/60">
-              <span>
-                <MapPinIcon height={20} width={20} />
-              </span>
-              <p>Location</p>
-            </div>
+            <p>{user?.primaryEmailAddress?.emailAddress}</p>
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Image src={avatar} alt="Avatar" className="h-36 w-36 rounded-full" />
+          <Image
+            src={user?.imageUrl}
+            alt="Avatar"
+            height={10}
+            width={150} // Set the same width as you set in params
+            className="rounded-full"
+          />
         </CardContent>
         <CardFooter className="p-5 text-left">
           <ul>
